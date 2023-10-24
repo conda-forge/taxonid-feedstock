@@ -1,5 +1,5 @@
 {% set name = "taxonid" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/brsynth/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 9167b95a28d1dc9ff593d8da497cbdb1833fa81ec13b9a5030f699f8ef045145
+  sha256: af20877bf9ede4be92fd5421a14be26583bdae4cacd16b745b575ed943fb9e69
 
 build:
   number: 0
