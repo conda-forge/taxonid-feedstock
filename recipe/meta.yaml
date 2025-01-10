@@ -10,16 +10,16 @@ source:
   sha256: af20877bf9ede4be92fd5421a14be26583bdae4cacd16b745b575ed943fb9e69
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install -vv .
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - biopython
     - brs_utils
     - colored
@@ -31,6 +31,7 @@ test:
     - taxonid
   requires:
     - pytest
+    - python {{ python_min }}
   commands:
     - python -m taxonid --help
     - cd tests
